@@ -22,8 +22,8 @@ model.resize_token_embeddings(len(tokenizer))
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
-max_source_length = 512
-max_target_length = 128
+max_source_length = 1024
+max_target_length = 512
 
 def preprocess_function(examples):
     inputs = examples["text"]
